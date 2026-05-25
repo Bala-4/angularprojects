@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Greencity_angular" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/angularbasics" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/countries" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/customDirectives" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/flightReservation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/multipleServices" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/my-angular-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pipes" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/postService" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/productClient" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reactiveforms" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/template_forms" vcs="Git" />
+  </component>
+</project>

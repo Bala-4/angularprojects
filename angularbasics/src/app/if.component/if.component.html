@@ -1,0 +1,29 @@
+<b *ngIf="true">You are the creator</b>
+<br>
+<b *ngIf="myfun()">from a function</b>
+
+<p>switch cases</p>
+<div [ngSwitch]="myCase">
+    <div *ngSwitchCase="1">Case 1</div>
+    <div *ngSwitchCase="2">Case 2</div>
+    <div *ngSwitchCase="3">Case 3</div>
+    <div *ngSwitchDefault>Default case</div>
+</div>
+
+<ul>
+    <li *ngFor="let games of getgames()">{{ games }}</li>
+    <div ngNonBindable> The code that renders above is {{games}}</div>
+</ul>
+
+<table>
+    <thead>
+        <tr>
+            <td [ngStyle]="{'color': color,'background-color':'blue','font-size':fontSize}">Name</td>
+            <td [ngStyle]="{'color':'white','background-color':'green'}">Rank</td>
+        </tr>
+    </thead>
+    <tr *ngFor="let student of getStudents()">
+        <td [style.background-color]="'red'">{{student.name}}</td>
+        <td [style.background-color]="'violet'" [ngClass]="classObj">{{student.rank}}</td>
+    </tr>
+</table>

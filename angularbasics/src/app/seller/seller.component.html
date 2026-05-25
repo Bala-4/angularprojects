@@ -1,0 +1,7 @@
+<button (click)="toggle()">Get Sellers</button>
+<br>
+<b [hidden]="hide">
+  <ul>
+    <li *ngFor="let seller of getSellers()">{{ seller }}</li>
+  </ul>
+</b>
