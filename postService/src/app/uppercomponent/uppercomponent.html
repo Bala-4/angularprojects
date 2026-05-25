@@ -1,0 +1,12 @@
+<!-- <input type="text" [(ngModel)]="my_message"/>
+<button (click)="convert({'message':my_message})">Submit</button>
+<br/>
+<h1 style="color: red">{{result}}</h1> -->
+<input [(ngModel)]="my_message" placeholder="Enter message">
+<button (click)="convert(my_message)">Submit</button>
+
+<div *ngIf="result" style="margin-top: 20px; padding: 10px; background-color: #f0f0f0; border-radius: 4px;">
+  <h3>Response:</h3>
+  <pre>{{ result }}</pre>
+</div>
+

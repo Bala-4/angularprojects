@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "http://test-routes.herokuapp.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": { "^/api": "" }
+  }
+}

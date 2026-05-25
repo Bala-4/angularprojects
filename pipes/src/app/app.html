@@ -1,0 +1,36 @@
+<h1>{{title}}</h1>
+<h1>{{title | titlecase}}</h1>
+<h1>{{title | uppercase}}</h1>
+<h1>{{title | lowercase}}</h1>
+
+<h1>{{mydate | date:'dd-MM-yyyy'}}</h1>
+<h1>{{mydate | date:'MMM-dd-yyyy'}}</h1>
+<h1>{{mydate | date:'shortDate'}}</h1>
+<h1>{{mydate | date:'mediumDate'}}</h1>
+<h1>{{mydate | date:'fullDate'}}</h1>
+
+<h1>{{mymoney}}</h1>
+<h1>{{mymoney | currency}}</h1>
+<h1>{{mymoney | currency:'GBP'}}</h1>
+<h1>{{mymoney | currency:'INR'}}</h1>
+
+<h1>{{myobj}}</h1>
+<h1>{{myobj | json}}</h1>
+
+<h1>{{mynumber}}</h1>
+<h1>{{mynumber | number:'4.2-3'}}</h1>
+
+<h1>{{stock}}</h1>
+<h1>{{stock | percent}}</h1>
+<h1>{{stock | percent:'3.1-2'}}</h1>
+
+<h1>{{numbers | slice:2:4}}</h1>
+<h1>{{numbers | slice:2:3}}</h1>
+<h1>{{numbers | slice:2:-1}}</h1>
+<b *ngFor="let v of numbers | slice:2">{{v}}</b>
+
+<h1>{{promise | async}}</h1>
+
+<h1>{{'Hello' | reversepipe}}</h1>
+
+

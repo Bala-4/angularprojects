@@ -1,0 +1,164 @@
+<!-- Top Navigation Bar (Black bar in image_938fc0.png) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black py-0 px-3 border-bottom border-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold fs-4 pe-4" href="#">GreenCity</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link px-3" href="#">Dashboard</a></li>
+        <li class="nav-item border-bottom border-3 border-white">
+          <a class="nav-link px-3 active fw-bold text-white" href="#">Resource Tracking</a>
+        </li>
+        <li class="nav-item"><a class="nav-link px-3" href="#">Projects</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="#">Compliance</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="#">Reports</a></li>
+      </ul>
+      <div class="d-flex align-items-center text-white-50 small">
+        <span class="me-3">Ward 12</span>
+        <div class="rounded-circle bg-white text-black d-flex align-items-center justify-content-center fw-bold" 
+             style="width: 32px; height: 32px; font-size: 12px;">AK</div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar (Light Gray Sidebar from image_938fc0.png) -->
+  <aside class="bg-light border-end" id="sidebar-wrapper" style="width: 200px; min-height: 100vh;">
+    <div class="p-3">
+      <div class="sidebar-section mb-4">
+        <p class="text-uppercase x-small text-muted fw-bold mb-2 ls-1">Resource Type</p>
+        <nav class="nav flex-column">
+          <a class="nav-link py-1 px-2 text-dark fw-bold bg-secondary-subtle rounded-1 mb-1" href="#">All Resources</a>
+          <a class="nav-link py-1 px-2 text-muted mb-1" href="#">Water</a>
+          <a class="nav-link py-1 px-2 text-muted mb-1" href="#">Energy</a>
+          <a class="nav-link py-1 px-2 text-muted" href="#">Waste</a>
+        </nav>
+      </div>
+
+      <div class="sidebar-section mb-4 pt-3 border-top">
+        <p class="text-uppercase x-small text-muted fw-bold mb-2 ls-1">Views</p>
+        <nav class="nav flex-column">
+          <a class="nav-link py-1 px-2 text-muted mb-1" href="#">Overview</a>
+          <a class="nav-link py-1 px-2 text-muted mb-1" href="#">Usage Logs</a>
+          <a class="nav-link py-1 px-2 text-muted mb-1" href="#">By Location</a>
+          <a class="nav-link py-1 px-2 text-muted" href="#">Thresholds</a>
+        </nav>
+      </div>
+
+      <div class="sidebar-section pt-3 border-top">
+        <p class="text-uppercase x-small text-muted fw-bold mb-2 ls-1">Quick Actions</p>
+        <nav class="nav flex-column">
+          <a class="nav-link py-1 px-2 text-muted mb-1" href="#">Add Resource</a>
+          <a class="nav-link py-1 px-2 text-muted mb-1" href="#">Log Usage</a>
+          <a class="nav-link py-1 px-2 text-muted" href="#">Set Alert</a>
+        </nav>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-grow-1 p-4 bg-white">
+    <!-- Header with Serif Font effect as seen in image_938fc0.png -->
+    <header class="d-flex justify-content-between align-items-center mb-4">
+      <div>
+        <h1 class="display-6 fw-bold" style="font-family: 'Times New Roman', serif;">Resource Tracking & Utilization</h1>
+        <p class="text-muted small">Module 2.3 · Monitoring energy, water, and waste across all zones</p>
+      </div>
+      <div class="d-flex gap-2">
+        <button class="btn btn-outline-dark px-4 py-2 border-2 fw-bold rounded-0">Export Report</button>
+        <button class="btn btn-dark px-4 py-2 fw-bold rounded-0">+ Log Usage</button>
+      </div>
+    </header>
+
+    <!-- Decorative Filter Bar -->
+    <section class="p-3 border rounded-3 mb-4 bg-white shadow-sm d-flex align-items-center gap-3">
+      <span class="fw-bold small text-muted">FILTER</span>
+      <select class="form-select border-0 bg-light w-auto"><option>All Types</option></select>
+      <select class="form-select border-0 bg-light w-auto"><option>All Locations</option></select>
+      <select class="form-select border-0 bg-light w-auto"><option>This Week</option></select>
+      <div class="vr mx-2"></div>
+      <span class="fw-bold small text-muted">SEARCH</span>
+      <input type="text" class="form-control border-0 bg-light rounded-pill px-3" 
+             placeholder="Resource ID or name..." style="max-width: 250px;">
+    </section>
+
+    <!-- KPI Row with Decorative Mini-Charts -->
+    <div class="row g-3 mb-4">
+      <div class="col-md-3" *ngFor="let card of [
+        {title: 'TOTAL RESOURCES', val: '124', sub: 'Across all zones'},
+        {title: 'WATER CAPACITY', val: '85%', sub: 'Above threshold'},
+        {title: 'ENERGY USAGE', val: '68%', sub: 'Within normal range'},
+        {title: 'WASTE COLLECTED', val: '3.2T', sub: 'This week'}
+      ]">
+        <div class="card h-100 border p-3 rounded-1 shadow-sm overflow-hidden">
+          <p class="x-small text-muted fw-bold mb-1">{{card.title}}</p>
+          <h2 class="fw-bold mb-1">{{card.val}}</h2>
+          <p class="x-small text-muted mb-3">{{card.sub}}</p>
+          <!-- Decorative Mini-Bar Chart Blocks at bottom -->
+          <div class="d-flex gap-1 align-items-end" style="height: 20px;">
+            <div class="flex-grow-1 bg-secondary opacity-25" style="height: 40%"></div>
+            <div class="flex-grow-1 bg-secondary opacity-25" style="height: 60%"></div>
+            <div class="flex-grow-1 bg-secondary opacity-25" style="height: 30%"></div>
+            <div class="flex-grow-1 bg-secondary opacity-50" style="height: 80%"></div>
+            <div class="flex-grow-1 bg-secondary opacity-25" style="height: 50%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Chart and Utilization -->
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="card border p-4 shadow-sm h-100">
+          <div class="d-flex justify-content-between mb-4">
+            <h5 class="fw-bold">WEEKLY USAGE BY TYPE</h5>
+            <a href="#" class="text-muted small">View full chart</a>
+          </div>
+          <!-- Bar Chart Placeholder -->
+          <div class="d-flex justify-content-between align-items-end px-4" style="height: 200px;">
+            <div class="bg-light border" style="width: 40px; height: 40%;"></div>
+            <div class="bg-secondary" style="width: 40px; height: 70%;"></div>
+            <div class="bg-light border" style="width: 40px; height: 50%;"></div>
+            <div class="bg-dark" style="width: 40px; height: 90%;"></div>
+            <div class="bg-light border" style="width: 40px; height: 60%;"></div>
+            <div class="bg-secondary" style="width: 40px; height: 75%;"></div>
+            <div class="bg-dark" style="width: 40px; height: 65%;"></div>
+          </div>
+          <div class="d-flex justify-content-between mt-2 px-4 x-small text-muted fw-bold">
+            <span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card border p-4 shadow-sm h-100">
+          <h5 class="fw-bold mb-4">CAPACITY UTILIZATION</h5>
+          <div class="mb-4">
+            <div class="d-flex justify-content-between small fw-bold mb-1">
+              <span>Water</span><span>85% / 100%</span>
+            </div>
+            <div class="progress rounded-pill mb-1" style="height: 10px; background: #eee;">
+              <div class="progress-bar bg-dark" style="width: 85%"></div>
+            </div>
+            <p class="x-small text-muted mb-0">Above safe threshold (80%)</p>
+          </div>
+          <div class="mb-4">
+            <div class="d-flex justify-content-between small fw-bold mb-1">
+              <span>Energy</span><span>68% / 100%</span>
+            </div>
+            <div class="progress rounded-pill mb-1" style="height: 10px; background: #eee;">
+              <div class="progress-bar bg-secondary" style="width: 68%"></div>
+            </div>
+            <p class="x-small text-muted mb-0">Within normal range</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Bottom Black Footer -->
+<footer class="bg-black text-white p-2 d-flex justify-content-between x-small border-top border-secondary">
+  <span>GreenCity Municipal Platform · Module 2.3: Resource Tracking</span>
+  <span>Wireframe Mockup · v2.1.0</span>
+</footer>

@@ -1,0 +1,15 @@
+<h1>{{ helloResponse?.message }}</h1>
+<table border>
+    <thead>
+        <th>Name</th>
+        <th>City</th>
+        <th>Country</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customerResponse?.records">
+            <td>{{ customer.Name }}</td>
+            <td>{{ customer.City }}</td>
+            <td>{{ customer.Country }}</td>
+        </tr>
+    </tbody>
+</table>

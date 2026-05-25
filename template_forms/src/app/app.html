@@ -1,0 +1,29 @@
+<form #personForm="ngForm" (ngSubmit)="onSubmit(personForm.value)">
+  <label>First Name:</label>
+  <input type="text" name="firstName" [(ngModel)]="firstName" />
+
+  <label>Last Name:</label>
+  <input type="text" name="lastName" [(ngModel)]="lastName" />
+
+  <label>Email:</label>
+  <input type="email" name="email" [(ngModel)]="email" />
+
+  <label>Gender:</label>
+  <input type="radio" name="gender" [(ngModel)]="gender" value="Male" /> Male
+  <input type="radio" name="gender" [(ngModel)]="gender" value="Female" /> Female
+
+  <label>Street:</label>
+  <input type="text" name="street" [(ngModel)]="street" />
+
+  <label>City:</label>
+  <input type="text" name="city" [(ngModel)]="city" />
+
+  <label>Country:</label>
+  <select name="country" [(ngModel)]="country">
+    <option value="India">India</option>
+    <option value="USA">USA</option>
+    <option value="UK">UK</option>
+  </select>
+
+  <button type="submit">Submit</button>
+</form>
